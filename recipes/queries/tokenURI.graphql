@@ -1,0 +1,9 @@
+query TokenURI($address: String!, $tokenId: BigInt!) {
+  tokenURI(
+    tokenId: $tokenId
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

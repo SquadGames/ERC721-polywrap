@@ -1,0 +1,9 @@
+query OwnerOf($address: String!, $tokenId: BigInt!) {
+  ownerOf(
+    tokenId: $tokenId
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

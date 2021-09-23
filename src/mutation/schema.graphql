@@ -1,0 +1,35 @@
+#import { Mutation, Connection } into Ethereum from "w3://ens/ethereum.web3api.eth"
+
+type Mutation {
+
+  approve(
+    connection: Ethereum_Connection
+    address: String!
+    to: String!
+    tokenId: BigInt!
+  ): Ethereum_TxResponse!
+
+  setApprovalForAll(
+    connection: Ethereum_Connection
+    address: String!
+    operator: String!
+    approved: Boolean!
+  ): Ethereum_TxResponse!
+
+  transferFrom(
+    connection: Ethereum_Connection
+    address: String!
+    from: String!
+    to: String!
+    tokenId: BigInt!
+  ): Ethereum_TxResponse!
+
+  safeTransferFrom(
+    connection: Ethereum_Connection
+    address: String!
+    from: String!
+    to: String!
+    tokenId: BigInt!
+    _data: String
+  ): Ethereum_TxResponse!
+}

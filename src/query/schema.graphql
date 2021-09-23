@@ -1,0 +1,45 @@
+#import { Query, Connection } into Ethereum from "w3://ens/ethereum.web3api.eth"
+
+type Query {
+
+  balanceOf(
+    connection: Ethereum_Connection
+    address: String!
+    owner: String!
+  ): BigInt!
+
+  ownerOf(
+    connection: Ethereum_Connection
+    address: String!
+    tokenId: BigInt!
+  ): String!
+
+  name(
+    connection: Ethereum_Connection
+    address: String!
+  ): String!
+
+  symbol(
+    connection: Ethereum_Connection
+    address: String!
+  ): String!
+
+  tokenURI(
+    connection: Ethereum_Connection
+    address: String!
+    tokenId: BigInt!
+  ): String!
+
+  getApproved (
+    connection: Ethereum_Connection
+    address: String!
+    tokenId: BigInt!
+  ): String!
+
+  isApprovedForAll(
+    connection: Ethereum_Connection
+    address: String!
+    owner: String!
+    operator: String!
+  ): Boolean!
+}

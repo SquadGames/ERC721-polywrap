@@ -1,0 +1,8 @@
+query Name($address: String!) {
+  name(
+    connection: {
+      networkNameOrChainId: $network
+    }
+    address: $address
+  )
+}

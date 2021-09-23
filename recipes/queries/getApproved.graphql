@@ -1,0 +1,9 @@
+query GetApproved($address: String!, $tokenId: BigInt!) {
+  getApproved(
+    tokenId: $tokenId
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

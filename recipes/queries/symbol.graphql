@@ -1,0 +1,8 @@
+query Symbol($address: String!) {
+  symbol(
+    connection: {
+      networkNameOrChainId: $network
+    }
+    address: $address
+  )
+}

@@ -1,0 +1,11 @@
+mutation SafeTransferFrom($ddress: String!, $from: String!, $to: String!, $tokenId: Int!) {
+  safeTransferFrom(
+    from: $from
+    to: $to
+    tokenId: $tokenId
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "api": "ens/testnet/erc721.eth",
+    "constants": "./constants.json"
+  },
+  {
+    "query": "./queries/balanceOf.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "owner": "$address0",
+      "network": "testnet"
+    }
+  },
+  {
+    "query": "./mutations/approve.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "to": "$address1",
+      "tokenId": "1"
+    }
+  },
+  {
+    "query": "./mutations/setApprovalForAll.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "operator": "$address1",
+      "approved": true
+    }
+  },
+  {
+    "query": "./mutations/transferFrom.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "from": "$address0",
+      "to": "$address1",
+      "tokenId": "1"
+    }
+  },
+  {
+    "query": "./queries/ownerOf.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "tokenId": "1"
+    }
+  },
+  {
+    "query": "./mutations/safeTransferFrom.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "from": "$address0",
+      "to": "$address1",
+      "tokenId": "2"
+    }
+  },
+  {
+    "query": "./queries/name.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet"
+    }
+  },
+  {
+    "query": "./queries/symbol.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet"
+    }
+  },
+  {
+    "query": "./queries/tokenURI.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "tokenId": "0"
+    }
+  },
+  {
+    "query": "./queries/getApproved.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "tokenId": "3"
+    }
+  },
+  {
+    "query": "./queries/isApprovedForAll.graphql",
+    "variables": {
+      "address": "$Erc721Addr",
+      "network": "testnet",
+      "owner": "$address0",
+      "operator": "$address1"
+    }
+  }
+]

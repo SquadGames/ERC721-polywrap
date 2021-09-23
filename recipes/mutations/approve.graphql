@@ -1,0 +1,10 @@
+mutation Approve($address: String!, $to: String!, $tokenId: Int!) {
+  approve(
+    address: $address
+    to: $to
+    tokenId: $tokenId
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

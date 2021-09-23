@@ -1,0 +1,10 @@
+mutation SetApprovalForAll($address: String!, $operator: String!, $approved: Boolean!) {
+  setApprovalForAll(
+    address: $address
+    operator: $operator
+    approved: $approved
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

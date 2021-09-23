@@ -1,0 +1,9 @@
+query BalanceOf($address: String!, $owner: String!) {
+  balanceOf(
+    address: $address
+    owner: $owner
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

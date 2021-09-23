@@ -1,0 +1,10 @@
+query IsApprovedForAll($address: String!, $owner: String!, $operator: String!) {
+  isApprovedForAll(
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+    owner: $owner
+    operator: $operator
+  )
+}

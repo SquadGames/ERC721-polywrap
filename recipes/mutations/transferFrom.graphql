@@ -1,0 +1,11 @@
+mutation TransferFrom($ddress: String!, $from: String!, $to: String!, $tokenId: Int!) {
+  transferFrom(
+    from: $from
+    to: $to
+    tokenId: $tokenId
+    address: $address
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}
